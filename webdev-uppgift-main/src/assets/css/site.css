@@ -1,0 +1,135 @@
+@import './navigation.css';
+
+/* Mobile first... */
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: rgb(6, 47, 80);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 1.3rem;
+    margin: auto;
+}
+
+
+.landing {
+    background: #01122c url('../images/image7.jpg') no-repeat center center/cover;
+    height: 600px;
+    padding-top: 6rem;
+    text-align: center;
+
+}
+
+.landing-content h1{
+    color: hsl(194, 85%, 92%);
+    font-size: 5rem;
+    line-height: 1.8;
+    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke-color: #1f1d2d;
+}
+
+.landing-content p{
+    background: rgb(16, 69, 113);
+    font-size: 1.2rem;
+    opacity: 0.8;
+    color: #f4f4f4;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.landing-content .course-info{
+    color: #f4f4f4;
+    
+}
+
+.main-info {
+    height: 400px;
+    background: rgb(38, 88, 129);
+}
+
+.main-info .image{
+    background: url(../images/image4.jpg) no-repeat center center/cover;
+    float: left;
+    width: 50%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.main-info section h2 {
+    color: #020e2e;
+    font-size: 2.5rem;
+    -webkit-text-stroke: 0.3px;
+    -webkit-text-stroke-color:#557bb1;
+}
+.main-info section p {
+    color: #020e2e;
+    font-size: 1.2rem;
+    padding: 2rem;
+    line-height: 1.2;
+    
+}
+
+
+.main-info .main-content {
+    float: right;
+    width: 50%;
+    min-height: 100%;
+    text-align: center;
+    padding: 3rem 2rem;
+    overflow: hidden;
+
+}
+.clear {
+    clear: both;
+}
+
+.main-info .course-info a{
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 1.2rem;
+    background-color: #0c2245;
+    padding: 1rem 2rem;
+}
+
+
+
+/* .landing-content h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    background: linear-gradient(0deg,
+            #0d0860 0%,
+            #090979 21%,
+            #0654aa 51%,
+            #00ff71 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #fff;
+} */
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+    .flex-container h1 {
+        font-size: 5rem;
+    }
+}
