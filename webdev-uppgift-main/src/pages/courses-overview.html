@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../assets/css/site.css">
         <link rel="stylesheet" href="../assets/css/courses-overview.css">
+        <script type="module" src="../lib/courses-overview.js" defer></script>
         <title>Kurser</title>
     </head>
 
@@ -27,21 +28,22 @@
                             <a href="/src/index.html">Start</a>
                         </li>
                         <li class="menu-item">
-                            <a class="active" href="./src/pages/courses.html">Kurser</a>
+                            <a class="active" href="/src/pages/courses-overview.html">Kurser</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
-            <article class="container">
-                <section id="courses" class="overview">
-                    <p>Kurstitel</p>
-                    <p>Poäng</p>
-                </section>
+            <img src="../assets/images/image10.jpg" alt="bild">
+            <article class="course-container">
+                <h1 class="title">Våra kurser</h1>
+                <article id="courses" class="overview"></article>
             </article>
 
         </main>
+        <a href="./course-add.html" class="add-course-button">➕ Lägg till kurs</a>
+
     </body>
 
 </html>

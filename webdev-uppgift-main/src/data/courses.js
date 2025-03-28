@@ -61,12 +61,5 @@ export const courses = [
     description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam commodo venenatis rhoncus. VivamusvehicleId lacusvehicleId elit tristique vulputate. Donec ut diam vitae ligula mollis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras tempor sed elit nec pretium. In accumsan odiovehicleId est vehicula tinvehicleIdunt. Aliquam tincidunt risus nec tellus auctor, eget gravida purus efficitur. Morbi rhoncus erat ac leo gravida, id varius ex rhoncus.',
     points: 30,
     placeOfStudy: 'Gävle',
-  },
-  {
-    id: 10,
-    title: 'Jenkins',
-    description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam commodo venenatis rhoncus. VivamusvehicleId lacusvehicleId elit tristique vulputate. Donec ut diam vitae ligula mollis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras tempor sed elit nec pretium. In accumsan odiovehicleId est vehicula tinvehicleIdunt. Aliquam tincidunt risus nec tellus auctor, eget gravida purus efficitur. Morbi rhoncus erat ac leo gravida, id varius ex rhoncus.',
-    points: 5,
-    placeOfStudy: 'Linköping',
   }
 ]

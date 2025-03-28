@@ -1,29 +1,45 @@
-// Skapar referenser till html element
+import { courses as staticCourses } from '../data/courses.js';
+import { getFromStorage, removeFromStorage } from './storage.js';
+
 const courseTitle = document.querySelector('.course-title');
-const location = document.querySelector('.info p:first-child');
+const placeOfStudy = document.querySelector('.info p:first-child');
 const points = document.querySelector('.info p:nth-child(2)');
 const description = document.querySelector('.info p:nth-child(3)');
+const deleteBtn = document.querySelector('.delete-course-button');
+
+let courseId = null;
 
 const initApp = () => {
-    const courseId = location.search.split('=') [1];
-    loadCourse(courseId);
+  courseId = +new URLSearchParams(location.search).get('course');
+  loadCourse(courseId);
 };
 
-const loadCourse = (courseId) => {
-    const course = courses.find(c => c.id === +courseId);
-    if(course){
-        setCourseTitle(course.title);
-        setLocation(course.location);
-        setPoints(course.points);
-    }
+const loadCourse = (id) => {
+  const allCourses = [...staticCourses, ...getFromStorage()];
+  const course = allCourses.find(c => c.id === id);
+
+  if (!course) {
+    courseTitle.innerText = 'Kursen kunde inte hittas.';
+    return;
+  }
+
+  courseTitle.innerText = course.title;
+  placeOfStudy.innerHTML += `<span> ${course.location ?? course.placeOfStudy} </span>`;
+  points.innerHTML += `<span> ${course.points} poäng</span>`;
+  description.innerHTML += `<br/><span> ${course.description} </span>`;
+  description.style.textAlign = 'justify';
+
+ 
+  const isFromStorage = getFromStorage().some(c => c.id === id);
+  if (!isFromStorage) deleteBtn.style.display = 'none';
 };
 
-const setCourseTitle = (title) => {
-    courseTitle.innerText = title;
-};
+deleteBtn.addEventListener('click', () => {
+  if (confirm('Är du säker på att du vill ta bort kursen?')) {
+    removeFromStorage(courseId);
+    alert('Kursen har tagits bort.');
+    location.href = './courses-overview.html'; 
+  }
+});
 
-const generateInfo = (course) => {
-    location.innerHTML += `<span> ${course.location} </span>`;
-    points.innerHTML += `<span> ${course.points} </span>`;
-    description.innerHTML += `<span> ${course.description} </span>`;
-}
+document.addEventListener('DOMContentLoaded', initApp);

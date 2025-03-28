@@ -1,46 +1,101 @@
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
-    justify-content: space-around;
-    gap: 2rem;
-}
 
-.card {
-    border: solid 1px #f4f4f4;
-    color: #f4f4f4;
-    background-color: #333;
-    border-radius: 2rem;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
-    min-width: 250px;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    border: solid 1px #333;
-    border-radius: 2rem;
-    cursor: pointer;
-}
-
-.card p {
+.overview {
+    height: 600px;
+    height: auto;
+    padding-top: 6rem;
     text-align: center;
     position: relative;
-    top: -40px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    padding: 2rem 1rem;
 }
 
-/* MEDIA QUERIES */
+main img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 35px;
+    left: 0;
+    z-index: -1;
+}
+
+.course-container .title {
+    color: hsl(194, 36%, 70%);
+    /* background: rgb(11, 29, 44, 0.7);  */
+    font-size: 3rem;
+    font-weight: 900px;
+    text-align: center;
+    line-height: 1.8;
+    -webkit-text-stroke: 1.5px;
+
+}
+
+.course-card {
+    background-color: rgb(38, 88, 129);
+    color: #fff;
+    border-radius: 0.4rem;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-width: 250px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.9;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
+}
+
+
+.course-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+.course-card p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin: 0.5rem 0 0;
+}
+
+
 @media (min-width: 768px) {
-    .gallery {
+    .overview {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 900px) {
-    .gallery {
+@media (min-width: 1024px) {
+    .overview {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.add-course-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: black;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .add-course-button:hover {
+    background-color: black;
+  }
+  

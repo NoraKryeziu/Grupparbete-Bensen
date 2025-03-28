@@ -1,0 +1,83 @@
+body {
+    background-image: url("/src/assets/images/image10.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    padding: 1rem;
+}
+
+.form-container{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    background-color: rgba(6, 47, 80, 0.9);
+    justify-content: center;
+    max-width: 30rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+
+.form-input label{
+    display: flex;
+    flex-basis: 100%;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    margin: 0.5rem;
+}
+
+.form-input input{
+    height: 1.8rem;
+    font-size: 1rem;
+}
+
+.form-button{
+    display: flex;
+    justify-content: center;
+}
+
+.form-input textarea{
+    resize: none;
+}
+
+.form-input button{
+    margin-top: 2rem;
+    padding: 0.2rem 0.5rem;
+    line-height: 3;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: solid 2px #032948;
+    color: whitesmoke;
+    background-color: rgb(38, 88, 129);
+    text-align: center;
+    /* box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6); */
+}
+
+.form-input button:hover{
+    background-color: rgb(58, 120, 170);
+}
+
+.form-input button:active{
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ef6c00;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .btn-submit:hover {
+    background-color: #d45500;
+  }
+  

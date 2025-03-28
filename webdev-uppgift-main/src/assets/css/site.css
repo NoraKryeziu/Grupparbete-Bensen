@@ -11,6 +11,19 @@
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background: rgb(6, 47, 80);
+    height: fit-content;
+    top: 1;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+footer{
+    color: white;
 }
 
 h1,
@@ -18,6 +31,7 @@ h2,
 h3,
 h4 {
     font-weight: 400;
+    top:1;
 }
 
 a {
@@ -33,11 +47,13 @@ a {
 
 
 .landing {
-    background: #01122c url('../images/image7.jpg') no-repeat center center/cover;
-    height: 600px;
-    padding-top: 6rem;
+    display: flex;
+    background: #01122c url('../images/image7.jpg');
+    background-size: cover;
+    height: 30rem;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-
 }
 
 .landing-content h1{
@@ -49,12 +65,11 @@ a {
 }
 
 .landing-content p{
-    background: rgb(16, 69, 113);
+    background-color: rgba(16, 69, 113, 0.8);
     font-size: 1.2rem;
-    opacity: 0.8;
     color: #f4f4f4;
     padding: 1rem;
-    margin-bottom: 3rem;
+    border-radius: 0.4rem;
 }
 
 .landing-content .course-info{
@@ -63,16 +78,16 @@ a {
 }
 
 .main-info {
-    height: 400px;
-    background: rgb(38, 88, 129);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(38, 88, 129);
+    width: 100%;
 }
 
-.main-info .image{
-    background: url(../images/image4.jpg) no-repeat center center/cover;
-    float: left;
+.image{
     width: 50%;
-    min-height: 100%;
-    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .main-info section h2 {
@@ -81,6 +96,7 @@ a {
     -webkit-text-stroke: 0.3px;
     -webkit-text-stroke-color:#557bb1;
 }
+
 .main-info section p {
     color: #020e2e;
     font-size: 1.2rem;
@@ -89,16 +105,11 @@ a {
     
 }
 
-
-.main-info .main-content {
-    float: right;
-    width: 50%;
-    min-height: 100%;
+.main-content {
     text-align: center;
     padding: 3rem 2rem;
-    overflow: hidden;
-
 }
+
 .clear {
     clear: both;
 }
@@ -109,6 +120,7 @@ a {
     font-size: 1.2rem;
     background-color: #0c2245;
     padding: 1rem 2rem;
+    border-radius: 0.4rem;
 }
 
 
@@ -128,8 +140,40 @@ a {
 } */
 
 /* MEDIA QUERIES */
-@media (min-width: 768px) {
-    .flex-container h1 {
-        font-size: 5rem;
+
+@media (max-width: 769px) {
+    .main-info {
+        display: flex;
+        flex-direction: row;
+        height: 400px;
+    }
+
+    .main-info .image {
+        width: 50%;
+        min-height: 100%;
+        object-fit: cover;
+        display: block; /* Visa bilden på större skärmar */
+    }
+
+    .main-info .main-content {
+        width: 50%;
+        text-align:center;
+        padding: 2rem 1rem;
+    }
+    .main-info section h2 {
+        font-size: 2rem;
+    }
+
+    .main-info section p {
+        font-size: 0.85rem;
+    }
+    .main-info .course-info a {
+        display: inline-block; /* Gör länken inline-block för att kunna stå bredvid texten */
+        padding: 1rem 1rem;
+        background-color: #0c2245;
+        color: #f4f4f4;
+        font-size: 1rem;     /* Standardstorlek på större skärmar */
+        text-align: center;
+        margin-top: -1rem;
     }
 }
