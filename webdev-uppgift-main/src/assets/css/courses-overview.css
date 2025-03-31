@@ -23,12 +23,13 @@ main img {
 
 .course-container .title {
     color: hsl(194, 36%, 70%);
-    /* background: rgb(11, 29, 44, 0.7);  */
-    font-size: 3rem;
+    background: rgb(11, 29, 44, 0.7);  
+    font-size: 4rem;
     font-weight: 900px;
     text-align: center;
     line-height: 1.8;
-    -webkit-text-stroke: 1.5px;
+    -webkit-text-stroke: 0.6px;
+    -webkit-text-stroke-color:#07111f;
 
 }
 
@@ -74,12 +75,6 @@ main img {
     }
 }
 
-@media (min-width: 1024px) {
-    .overview {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 .add-course-button {
     position: fixed;
     bottom: 2rem;
@@ -98,4 +93,10 @@ main img {
   .add-course-button:hover {
     background-color: black;
   }
+@media (min-width: 600px) {
+    .overview {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
   

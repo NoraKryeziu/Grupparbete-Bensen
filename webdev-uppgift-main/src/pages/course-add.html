@@ -33,6 +33,7 @@
     </header>
     <main>
         <div class="form-container">
+            <div id="message" class="message success" style="display: none;"></div>
             <form id="course-form">
                 <div class="form-input">
                     <label for="title">Kurstitel:</label>
@@ -54,10 +55,9 @@
                     <button type="submit" class="btn-submit">Lägg till</button>
                 </div>
             </form>
-            <!-- <h2>Kurser:</h2> -->
-            <!-- <ul id="course-list"></ul> -->
         </div>
     </main>
+    <div id="toast" class="toast">Kursen har lagts till!</div>
     <script type="module" src="/src/lib/course-add.js"></script>
-</body>
+    </body>
 </html>

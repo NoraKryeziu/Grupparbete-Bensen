@@ -1,5 +1,6 @@
 import { addToStorage } from './storage.js';
 
+const toast = document.querySelector('#toast');
 const courseForm = document.querySelector('#course-form');
 const courseList = document.querySelector('#course-list');
 
@@ -23,11 +24,25 @@ const handleAddCourse = (event) => {
     alert('Fyll i alla fält!');
     return;
   }
-
+  
   addToStorage(course);
-  addCourseToDom(course);
   courseForm.reset();
+
+  
+
+toast.classList.add('show');
+toast.textContent = 'Kursen har lagts till!';
+
+setTimeout(() => {
+  toast.classList.remove('show');
+}, 3000);
+
+
+  setTimeout(() => {
+    messageBox.style.display = 'none';
+  }, 3000);
 };
+
 
 const addCourseToDom = (course) => {
   const li = document.createElement('li');
