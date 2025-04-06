@@ -1,13 +1,16 @@
 /* Create the basic menu for mobile first... */
 
+header {
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    background-color: #020c2e;
+    opacity: 0.9;
+    z-index: 1;
+}
+
 nav {
     padding: 0 1rem;
-    /* position: sticky !important;
-    top: 0;
-    left: 0; */
-    background: #020c2e;
-    opacity: 0.9;
-    /* z-index: 1000; */
 }
 
 nav ul {
@@ -19,7 +22,7 @@ nav ul {
 }
 
 nav ul li.logo {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 }
 
 nav ul li.logo a {
@@ -43,13 +46,14 @@ nav ul li a {
     padding: 0.4rem;
     color: #f4f4f4;
     font-family: 'Courier New', Courier, monospace;
-    
+
 }
 
 nav ul li.menu-item:hover {
     background: #294970;
     color: #f4f4f4;
 }
+
 nav ul li a.active {
     color: #7193be;
 }
