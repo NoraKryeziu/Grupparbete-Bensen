@@ -16,8 +16,8 @@
 }
 
 .course-container .title {
-    color: hsl(194, 36%, 70%);
-    background: rgb(11, 29, 44, 0.7);
+    color: hsl(194, 36%, 80%);
+    background: rgba(11, 29, 44, 0.7);
     font-size: 4rem;
     font-weight: 900px;
     text-align: center;
