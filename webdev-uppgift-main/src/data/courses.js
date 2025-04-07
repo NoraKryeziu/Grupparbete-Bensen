@@ -63,3 +63,4 @@ export const courses = [
     placeOfStudy: 'Gävle',
   }
 ]
+

@@ -10,13 +10,13 @@ const deleteBtn = document.querySelector('.delete-course-button');
 let courseId = null;
 
 const initApp = () => {
-  courseId = +new URLSearchParams(location.search).get('course');
+  courseId = new URLSearchParams(location.search).get('course');
   loadCourse(courseId);
 };
 
 const loadCourse = (id) => {
   const allCourses = [...staticCourses, ...getFromStorage()];
-  const course = allCourses.find(c => c.id === id);
+  const course = allCourses.find(c => c._id === id);
 
   if (!course) {
     courseTitle.innerText = 'Kursen kunde inte hittas.';
@@ -30,7 +30,7 @@ const loadCourse = (id) => {
   description.style.textAlign = 'justify';
 
  
-  const isFromStorage = getFromStorage().some(c => c.id === id);
+  const isFromStorage = getFromStorage().some(c => c._id === id);
   if (!isFromStorage) deleteBtn.style.display = 'none';
 };
 

@@ -3,8 +3,8 @@ import { getFromStorage } from './storage.js';
 
 const courseList = document.querySelector('#courses');
 
-const initApp = () => {
-    const savedCourses = getFromStorage();
+const initApp = async () => {
+    const savedCourses = await getFromStorage();
     const allCourses = [...staticCourses, ...savedCourses];
     renderCourses(allCourses);
 };
@@ -25,7 +25,7 @@ const generateCourseHtml = (course) => {
     points.innerText = `${course.points} poäng`;
 
     section.addEventListener('click', () => {
-        location.href = `../pages/course-details.html?course=${course.id}`;
+        location.href = `../pages/course-details.html?course=${course._id}`;
     }); 
 
     section.appendChild(title);

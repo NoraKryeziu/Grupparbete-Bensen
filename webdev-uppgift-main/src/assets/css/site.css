@@ -37,7 +37,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #01122c url('../images/image7.jpg');
+    background: #01122c url('https://res.cloudinary.com/dtcbj9cs5/image/upload/v1744030136/image7_o2rd0u.jpg');
     background-size: cover;
     text-align: center;
     gap: 1em;
