@@ -61,16 +61,15 @@
         </footer>
 
         <script type="module">
-            import { courses as staticCourses } from "./data/courses.js"
             import { getFromStorage } from "./lib/storage.js"
 
             const dropdown = document.querySelector("#dropdown-course-list")
-            const allCourses = [...staticCourses, ...getFromStorage()]
+            const allCourses = await getFromStorage()
 
             allCourses.forEach(course => {
                 const li = document.createElement("li")
                 const a = document.createElement("a")
-                a.href = `/src/pages/course-details.html?course=${course.id}`
+                a.href = `/src/pages/course-details.html?course=${course._id}`
                 a.textContent = course.title
                 li.appendChild(a)
                 dropdown.appendChild(li)
