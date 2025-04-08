@@ -6,7 +6,7 @@ export const get = async (endpoint) => {
             method: 'GET',
             headers: {
                 'x-apikey': config.apiKey,
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
             }
         })
         if (response.ok) {
@@ -25,13 +25,13 @@ export const post = async (endpoint, object) => {
             method: 'POST',
             headers: {
                 'x-apikey': config.apiKey,
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(object)
         })
 
         if (response.ok) {
-            return await response.json()
+            return response
         } else {
             throw new Error(`Något gick fel: ${response.status} - ${response.statusText}`)
         }
@@ -46,12 +46,12 @@ export const remove = async (endpoint) => {
             method: 'DELETE',
             headers: {
                 'x-apikey': config.apiKey,
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
             }
         })
 
         if (response.ok) {
-            return await response.json()
+            return response
         } else {
             throw new Error(`Något gick fel: ${response.status} - ${response.statusText}`)
         }

@@ -34,9 +34,14 @@ const loadCourse = async (id) => {
 
 deleteBtn.addEventListener('click', async () => {
     if (confirm('Är du säker på att du vill ta bort kursen?')) {
-        await removeFromStorage(courseId)
-        alert('Kursen har tagits bort.')
-        location.href = './courses-overview.html'
+        const result = await removeFromStorage(courseId)
+
+        if (result) {
+            alert('Kursen har tagits bort.')
+            location.href = './courses-overview.html'
+        } else {
+            alert('Något gick fel...')
+        }
     }
 })
 
