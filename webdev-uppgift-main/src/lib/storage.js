@@ -1,23 +1,15 @@
-import * as http from "./utilities/httpClient.js";
+import * as http from "./utilities/httpClient.js"
 
-export const addToStorage = (course) => {
-  const courses = getFromStorage();
-  courses.push(course);
-  localStorage.setItem('courses', JSON.stringify(courses));
-};
+export const addToStorage = async (course) => {
+    const response = await http.post('courses', course)
+    return response.ok
+}
 
 export const getFromStorage = async () => {
-  let items;
+    return await http.get('courses')
+}
 
-  if (localStorage.getItem('courses') === null) {
-    items = JSON.parse(await http.get('courses'));
-  } else {
-    items = JSON.parse(localStorage.getItem('courses'));
-  }
-  return items;
-};
-
-export const removeFromStorage = (id) => {
-  const courses = getFromStorage().filter(course => course.id !== id);
-  localStorage.setItem('courses', JSON.stringify(courses));
-};
+export const removeFromStorage = async (id) => {
+    const response = await http.remove(`courses/${id}`)
+    return response.ok
+}
