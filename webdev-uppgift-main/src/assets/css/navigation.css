@@ -22,7 +22,7 @@ nav ul {
 }
 
 nav ul li.logo {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 nav ul li.logo a {
@@ -44,7 +44,7 @@ nav ul li.menu-item {
 nav ul li a {
     display: block;
     padding: 0.4rem;
-    color: #f4f4f4;
+    color: #6498dd;
     font-family: 'Courier New', Courier, monospace;
 
 }
@@ -55,7 +55,7 @@ nav ul li.menu-item:hover {
 }
 
 nav ul li a.active {
-    color: #7193be;
+    color: whitesmoke;
 }
 
 /* How to display the dropdown menu... */
@@ -135,5 +135,11 @@ nav ul li .menu-btn:checked~.menu-icon .nav-icon::after {
 
     nav ul li.toggle {
         display: none;
+    }
+}
+
+@media (min-width: 1280px) {
+    nav ul li.logo {
+        font-size: 1.5rem;
     }
 }
